@@ -16,9 +16,9 @@ const create_blog = (req, res) =>{
 
     // creating a blog
     const blog = new Blog({
-        title : 'Vitalis',
-        description : 'This is my first name',
-        owner : 'Cheborgei'
+        title : 'Kipyegon',
+        description : 'This name is my Christian name, it gets deprecated once I passed my innitiation right of passage.',
+        owner : 'Vitalis'
     })
 
     // Saving the blog
@@ -42,7 +42,7 @@ const single_blog = (req, res) =>{
         res.send(results)
     })
     .catch((error) =>{
-        console.log(error)
+        res.status(404).sendFile('../views/error404.html')
     });
 };
 

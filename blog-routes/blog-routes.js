@@ -10,6 +10,6 @@ router.get('/', blogControllers.all_blogs);
 router.get('/create-blog', blogControllers.create_blog);
 
 // Getting a single blog
-router.get('/single-blog', blogControllers.single_blog);
+router.get('/single-blog/:id', blogControllers.single_blog);
 
 module.exports = router;
