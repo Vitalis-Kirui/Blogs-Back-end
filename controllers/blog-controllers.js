@@ -45,3 +45,10 @@ const single_blog = (req, res) =>{
         console.log(error)
     });
 };
+
+// exporting controller function
+module.exports = {
+    all_blogs,
+    create_blog,
+    single_blog
+}
