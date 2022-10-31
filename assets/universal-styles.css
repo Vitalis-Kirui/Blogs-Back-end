@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nova Round', cursive;
+}
+
+.container{
+    padding-top: 20px;
+}
+
+.container hr{
+    width: 50%;
+    margin: auto;
+    padding-bottom: 10px;
+}
