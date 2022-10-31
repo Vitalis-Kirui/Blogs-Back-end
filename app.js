@@ -26,3 +26,8 @@ app.get('/about', (req, res) =>{
 app.get('/', (req, res) =>{
     res.redirect('/home');
 });
+
+// use function for error 404
+app.use((req, res) =>{
+    res.status(404).sendFile('./views/error404.html', {root : __dirname});
+});
