@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const blogRoutes = require('./blog-routes/blog-routes');
 
 const app = express();
 
@@ -34,6 +35,9 @@ app.get('/about-us', (req, res) =>{
 app.get('/about', (req, res) =>{
     res.redirect('/about-us');
 });
+
+// Blog routes
+app.use('/blogs', blogRoutes);
 
 app.get('/', (req, res) =>{
     res.redirect('/home');
