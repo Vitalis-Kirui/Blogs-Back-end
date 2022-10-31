@@ -1,12 +1,24 @@
 const express = require('express');
+const mongoose = require('mongoose');
 
 const app = express();
 
+// Connection to database string
+const dbconnector = 'mongodb+srv://vitalis:vitalis1234@ninjatuts.tzbzx2y.mongodb.net/Ninja-2?retryWrites=true&w=majority'
+
+// connecting to database
+mongoose.connect(dbconnector)
+.then((results) =>{
+    // Listening to requests
+    app.listen(3000);
+    console.log("Successfully connected to database")
+})
+.catch((error) =>{
+    console.log(error);
+})
+
 // Static middleware
 app.use(express.static('assets'));
-
-// Listening to requests
-app.listen(3000);
 
 // Listening to home page
 app.get('/home', (req, res) =>{
