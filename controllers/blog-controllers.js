@@ -32,3 +32,16 @@ const create_blog = (req, res) =>{
 
 };
 
+// Fetching a single blog using it's id
+const single_blog = (req, res) =>{
+    const id = req.params.id;
+
+    // Finding using the id
+    Blog.findById(id)
+    .then((results) =>{
+        res.send(results)
+    })
+    .catch((error) =>{
+        console.log(error)
+    });
+};
